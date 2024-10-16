@@ -77,7 +77,7 @@ function testMe() {
   first text object of the array) the text will just inherit the default style 
   from the textbox.
   */
-  addTextbox(testTextArray, doc, 100, 100, 200, {
+  addTextbox(testTextArray, doc, 100, 100, 200, /*height*/null, {
     color: "black",
     fontSize: 13,
     lineHeight: 1.5,
@@ -103,7 +103,7 @@ const addTextbox = require("textbox-for-pdfkit");
 ### The `addTextbox()` function
 Syntax:
 ```javascript
-addTextbox(textArray, doc, posX, posY, width, defaultStyle);
+addTextbox(textArray, doc, posX, posY, width, height, defaultStyle);
 ```
 Function parameter description:
 - **textArray:** An array of [Text Objects](#text-objects)
@@ -111,6 +111,7 @@ Function parameter description:
 - **posX:** The X-Position of the upper left corner of your Textbox (in PDF-points)
 - **posY:** The Y-Position of the upper left corner of your Textbox (in PDF-points)
 - **width:** The width of your Textbox (in PDF-points)
+- **height:** The maximum height of your Textbox (in PDF-points, optional)
 - **defaultStyle:** (optional) An object which defines the default styling of the whole textbox. The same styling keywords as in [Text Objects](#text-objects) (except "text", and "newline" attributes) can be used
 
 ### <a name="text-objects"></a>Text Objects
